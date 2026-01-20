@@ -202,3 +202,9 @@ impl<C: Config> Plugin for GgrsPlugin<C> {
             .add_plugins((ChecksumPlugin, EntityChecksumPlugin, GgrsTimePlugin));
     }
 }
+
+impl MaxPredictionWindow {
+    pub fn get(&self) -> usize {
+        self.0
+    }
+}
